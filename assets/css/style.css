@@ -110,7 +110,26 @@
   --transition-2: 0.5s ease-in-out;
 
 }
+/* Sayfaları (article) varsayılan olarak gizle */
+.main-content article {
+  display: none;
+}
 
+/* Sadece "active" sınıfına sahip olan sayfayı göster */
+.main-content article.active {
+  display: block; /* veya "grid", "flex" gibi projenize uygun bir değer */
+  animation: fadeIn 0.5s ease-in-out; /* Güzel bir geçiş efekti için */
+}
+
+/* Animasyon tanımı (isteğe bağlı) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 
 
